@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander World</title>
+    <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-circle me-1"></i> Login
+          </button>
+        </a>
+          
+        <a href="./booknow.html">
+          <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+            Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Mini Hero Banner -->
+  <div class="mini-hero" style="background-image: url('https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container mini-hero-content text-white">
+      <h1 class="display-4 text-white fw-bold mb-2">About WanderWorld Travels</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+ <!-- Company Intro & Our Story -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="text-primary fw-bold text-uppercase tracking-wider">Our Origin</span>
+          <h2 class="display-5 fw-bold mt-2 mb-4">Designing Adventures Since 2011</h2>
+          <p class="text-muted mb-3">WanderWorld Travels started with a simple belief: travel should be transformative, secure, and uniquely personal. Founded in Boston as a two-person regional guide company, we have expanded to become a leading global booking platform connecting travelers with verified hotels, guides, and customized tour packages across 120 countries.</p>
+          <p class="text-muted mb-4">Our local expertise and 24/7 client assistant networks ensure that from the moment you submit booking details to the day you arrive back home, your experience is entirely hands-free and unforgettable.</p>
+          <button class="btn btn-primary px-4 py-2.5 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">Book a Trip with Us</button>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-sm w-100" alt="Our Story">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Mission -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-white h-100">
+            <div class="fs-1 text-primary mb-3"><i class="bi bi-compass-fill"></i></div>
+            <h3 class="fw-bold mb-3">Our Mission</h3>
+            <p class="text-muted mb-0">To connect travelers with local cultures and nature, providing extremely safe, custom, and professional tour packages that inspire discovery and protect local tourism ecosystems.</p>
+          </div>
+        </div>
+        <!-- Vision -->
+        <div class="col-md-6 col-lg-5">
+          <div class="card border-0 shadow-sm p-4 rounded-4 bg-white h-100">
+            <div class="fs-1 text-info mb-3"><i class="bi bi-eye-fill"></i></div>
+            <h3 class="fw-bold mb-3">Our Vision</h3>
+            <p class="text-muted mb-0">To become the world's most trusted and sustainable travel planning platform, using digital tools to personalize journeys while offering zero hidden-fee bookings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Company Milestones Section (replaced timeline) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Our Journey</span>
+        <h2 class="display-5 fw-bold mt-2">Key Milestones</h2>
+        <p class="text-muted col-md-6 mx-auto">From a two-person startup to a global travel leader — every year brought a defining chapter to our story.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Milestone 1 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="milestone-card h-100">
+            <div class="milestone-year-badge">2011</div>
+            <div class="milestone-icon-wrap bg-primary bg-opacity-10">
+              <i class="bi bi-flag-fill text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-2 mt-3">Agency Founded</h5>
+            <p class="text-muted small mb-0">Started as a small local tour guiding firm in Boston with just two employees, organizing weekend getaways and hiking guides.</p>
+          </div>
+        </div>
+        <!-- Milestone 2 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="milestone-card h-100">
+            <div class="milestone-year-badge" style="background: linear-gradient(135deg,#0dcaf0,#0d6efd);">2015</div>
+            <div class="milestone-icon-wrap" style="background:rgba(13,202,240,0.1);">
+              <i class="bi bi-globe2 text-info"></i>
+            </div>
+            <h5 class="fw-bold mb-2 mt-3">International Expansion</h5>
+            <p class="text-muted small mb-0">Opened offices in Rome and Tokyo, growing our tour package roster to 50+ international destinations across four continents.</p>
+          </div>
+        </div>
+        <!-- Milestone 3 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="milestone-card h-100">
+            <div class="milestone-year-badge" style="background: linear-gradient(135deg,#6f42c1,#0d6efd);">2020</div>
+            <div class="milestone-icon-wrap" style="background:rgba(111,66,193,0.1);">
+              <i class="bi bi-laptop-fill" style="color:#6f42c1;"></i>
+            </div>
+            <h5 class="fw-bold mb-2 mt-3">Going Fully Digital</h5>
+            <p class="text-muted small mb-0">Launched our all-in-one online booking portal with flexible reservation tools and AI-powered custom package design for every traveler.</p>
+          </div>
+        </div>
+        <!-- Milestone 4 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="milestone-card h-100">
+            <div class="milestone-year-badge" style="background: linear-gradient(135deg,#fd7e14,#ffc107);">2026</div>
+            <div class="milestone-icon-wrap" style="background:rgba(255,193,7,0.12);">
+              <i class="bi bi-emoji-laughing-fill text-warning"></i>
+            </div>
+            <h5 class="fw-bold mb-2 mt-3">50,000+ Happy Clients</h5>
+            <p class="text-muted small mb-0">Celebrating a landmark milestone of serving 50k adventurers globally with an outstanding 4.9-star average satisfaction rating.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Why Choose Us -->
+  <section class="py-5" style="background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Our Advantage</span>
+        <h2 class="display-5 fw-bold mt-2">Why Travelers Choose Us</h2>
+        <p class="text-muted col-md-6 mx-auto">We go beyond bookings. We craft personalized journeys backed by industry expertise, transparent pricing, and round-the-clock care.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(13,110,253,0.08);">
+              <i class="bi bi-shield-fill-check text-primary"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Verified & Secure Bookings</h5>
+            <p class="text-muted small mb-0">Every hotel, guide, and transport partner is rigorously vetted. Your payments are secured by SSL encryption and our Money-Back Guarantee.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(13,202,240,0.08);">
+              <i class="bi bi-person-workspace text-info"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Expert Human Concierge</h5>
+            <p class="text-muted small mb-0">Real destination specialists — not bots — are available 24/7 to customize your itinerary, answer questions, and handle emergencies on the go.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(25,135,84,0.08);">
+              <i class="bi bi-tags-fill text-success"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Best Price Guarantee</h5>
+            <p class="text-muted small mb-0">We compare hundreds of providers so you never overpay. Find a lower price anywhere and we'll match it — no questions asked.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(111,66,193,0.08);">
+              <i class="bi bi-puzzle-fill" style="color:#6f42c1;"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Fully Customizable Packages</h5>
+            <p class="text-muted small mb-0">Mix and match flights, hotels, activities, and guided tours to build a trip that perfectly fits your budget, timeline, and style.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(253,126,20,0.08);">
+              <i class="bi bi-geo-alt-fill text-warning"></i>
+            </div>
+            <h5 class="fw-bold mb-2">120+ Countries Covered</h5>
+            <p class="text-muted small mb-0">From the icy fjords of Norway to the beaches of Bali, our global network spans 120 countries and growing — your world, your choice.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="why-card h-100 bg-white rounded-4 p-4 shadow-sm">
+            <div class="why-icon-wrap mb-3" style="background:rgba(220,53,69,0.08);">
+              <i class="bi bi-heart-fill text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-2">4.9★ Client Satisfaction</h5>
+            <p class="text-muted small mb-0">Our thousands of five-star reviews speak for themselves. We measure success not in transactions, but in genuine traveler happiness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <!-- Global Reach Stats Banner -->
+  <section class="py-5" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="text-info fw-bold text-uppercase tracking-wider">By The Numbers</span>
+        <h2 class="display-5 fw-bold text-white mt-2">Our Global Reach</h2>
+      </div>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-6 col-md-3">
+          <div class="reach-stat-card">
+            <div class="reach-icon"><i class="bi bi-globe-americas"></i></div>
+            <div class="reach-number" >120</div>
+            <div class="reach-label">Countries Covered</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="reach-stat-card">
+            <div class="reach-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="reach-number" data-target="50000">50000</div>
+            <div class="reach-label">Happy Travelers</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="reach-stat-card">
+            <div class="reach-icon"><i class="bi bi-building-fill"></i></div>
+            <div class="reach-number" >3220</div>
+            <div class="reach-label">Partner Hotels</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="reach-stat-card">
+            <div class="reach-icon"><i class="bi bi-star-fill"></i></div>
+            <div class="reach-number reach-decimal">4.9</div>
+            <div class="reach-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sustainability Pledge -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center">
+          <div class="sustain-visual">
+            <div class="sustain-circle">
+              <i class="bi bi-tree-fill"></i>
+            </div>
+            <div class="sustain-badge sustain-badge-1"><i class="bi bi-recycle"></i> Carbon Offset</div>
+            <div class="sustain-badge sustain-badge-2"><i class="bi bi-droplet-fill"></i> Zero Plastic</div>
+            <div class="sustain-badge sustain-badge-3"><i class="bi bi-sun-fill"></i> Eco Hotels</div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <span class="text-success fw-bold text-uppercase tracking-wider">Green Travel</span>
+          <h2 class="display-5 fw-bold mt-2 mb-4">Our Sustainability Pledge</h2>
+          <p class="text-muted mb-3">At WanderWorld, we believe that exploring the world should never come at the planet's expense. We are committed to responsible and sustainable tourism practices that protect the destinations we love.</p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="badge rounded-circle p-2" style="background:rgba(25,135,84,0.1);">
+                    <i class="bi bi-check2 text-success fs-5"></i>
+                  </span>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Carbon-Neutral Packages</h6>
+                  <p class="text-muted small mb-0">We offset 100% of carbon emissions for every trip booked through our platform.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="badge rounded-circle p-2" style="background:rgba(25,135,84,0.1);">
+                    <i class="bi bi-check2 text-success fs-5"></i>
+                  </span>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Eco-Certified Partners</h6>
+                  <p class="text-muted small mb-0">We only partner with hotels and operators that meet our strict environmental standards.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="badge rounded-circle p-2" style="background:rgba(25,135,84,0.1);">
+                    <i class="bi bi-check2 text-success fs-5"></i>
+                  </span>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Local Community Support</h6>
+                  <p class="text-muted small mb-0">10% of every booking fee goes directly to supporting local communities and indigenous cultural programs.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-start gap-3">
+                <div class="flex-shrink-0 mt-1">
+                  <span class="badge rounded-circle p-2" style="background:rgba(25,135,84,0.1);">
+                    <i class="bi bi-check2 text-success fs-5"></i>
+                  </span>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Plastic-Free Initiatives</h6>
+                  <p class="text-muted small mb-0">All our travel kits and partner amenities are 100% plastic-free and biodegradable.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Team -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">The Crew</span>
+        <h2 class="display-5 fw-bold mt-2">Meet Our Leadership Team</h2>
+        <p class="text-muted col-md-6 mx-auto">Our specialized team of destination planners and customer support executives works tirelessly to coordinate your dream stay.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Team 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-white h-100 card-hover">
+            <img src="./images/p1.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Jonathan">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Jonathan Vance</h5>
+              <span class="text-muted small d-block mb-3">CEO & Co-Founder</span>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-white h-100 card-hover">
+            <img src="./images/p3.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Emma">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Emma Watson</h5>
+              <span class="text-muted small d-block mb-3">Lead Destination Planner</span>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-white h-100 card-hover">
+            <img src="./images/p2.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Jack">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Jack Shepherd</h5>
+              <span class="text-muted small d-block mb-3">Customer Support Head</span>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden text-center bg-white h-100 card-hover">
+            <img src="./images/p4.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Sofia">
+            <div class="card-body p-4">
+              <h5 class="fw-bold mb-1">Sofia Rodriguez</h5>
+              <span class="text-muted small d-block mb-3">Operations Manager</span>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Achievements & Awards -->
+  <section class="py-5">
+    <div class="container col-lg-8 mx-auto text-center">
+      <h2 class="display-6 fw-bold mb-4">Awards & Recognition</h2>
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-sm-4">
+          <div class="p-3 bg-white border rounded-4 shadow-sm">
+            <i class="bi bi-award text-warning display-5 d-block mb-2"></i>
+            <h5 class="fw-bold mb-1">Best Travel Agency</h5>
+            <span class="text-muted small">Tourism Awards 2024</span>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="p-3 bg-white border rounded-4 shadow-sm">
+            <i class="bi bi-shield-check text-primary display-5 d-block mb-2"></i>
+            <h5 class="fw-bold mb-1">Safe Tourism Badge</h5>
+            <span class="text-muted small">Global Travel Council</span>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="p-3 bg-white border rounded-4 shadow-sm">
+            <i class="bi bi-emoji-smile text-success display-5 d-block mb-2"></i>
+            <h5 class="fw-bold mb-1">99% Client Rating</h5>
+            <span class="text-muted small">Reviewers Choice 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Partners -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-4">Our Trusted Travel Partners</h3>
+      <div class="row g-4 align-items-center justify-content-center">
+        <!-- Mock Partner logos with text styles and icons -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="p-3 bg-white rounded-3 shadow-sm partner-logo">
+            <i class="bi bi-airplane-fill text-secondary me-2"></i>
+            <span class="fw-bold text-secondary">Global Air</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="p-3 bg-white rounded-3 shadow-sm partner-logo">
+            <i class="bi bi-building-fill text-secondary me-2"></i>
+            <span class="fw-bold text-secondary">Resort Club</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="p-3 bg-white rounded-3 shadow-sm partner-logo">
+            <i class="bi bi-shield-lock-fill text-secondary me-2"></i>
+            <span class="fw-bold text-secondary">Cover Safe</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="p-3 bg-white rounded-3 shadow-sm partner-logo">
+            <i class="bi bi-calendar2-week-fill text-secondary me-2"></i>
+            <span class="fw-bold text-secondary">Plan Master</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567</p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> contact@wanderworld.com</p>
+          
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wander World</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal"
+              data-bs-target="#loginModal">
+              <i class="bi bi-person-circle me-1"></i> Login
+            </button>
+          </a>
+
+          <a href="./booknow.html">
+            <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+              Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Mini Hero Banner -->
+  <div class="mini-hero wave-divider"
+    style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container mini-hero-content text-white">
+      <h1 class="display-4 fw-bold text-white mb-2">Our Destinations</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a>
+          </li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Destinations</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Destinations Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Where we can take you</span>
+        <h2 class="display-5 fw-bold mt-2">Explore the World</h2>
+        <p class="text-muted col-md-6 mx-auto">We offer comprehensive guided trips to both stunning local wonders and
+          top-rated international city landmarks.</p>
+      </div>
+
+
+      <div class="tab-content" id="destinationTabContent">
+        <!-- ALL TAB -->
+        <div class="tab-pane fade show active" id="all-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="New York">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$500+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">New York City, USA</h4>
+                  <p class="text-muted small mb-3">Witness the statue of liberty, broadway shows, and walking routes
+                    through Central Park.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.8</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book
+                      This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1615551043360-33de8b5f410c?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Grand Canyon">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$400+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Grand Canyon, USA</h4>
+                  <p class="text-muted small mb-3">Marvel at spectacular deep rock canyons carved through millions of
+                    years by the Colorado River.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.7</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Maui Hawaii">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$950+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Maui, Hawaii</h4>
+                  <p class="text-muted small mb-3">Bask in the golden sandy beaches, enjoy world class surfing, and hike
+                    spectacular rainforest parks.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.9</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Yosemite">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$450+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Yosemite Valley, USA</h4>
+                  <p class="text-muted small mb-3">Immerse in beautiful giant sequoia forests and marvel at El Capitan
+                    granite dome cliffs.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.9</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Miami">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$600+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Miami Beach, USA</h4>
+                  <p class="text-muted small mb-3">Experience vibrant nightlife, high-end oceanfront hotels, and
+                    colorful Art Deco architectures.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.6</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/a2.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Las Vegas">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$350+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Las Vegas, USA</h4>
+                  <p class="text-muted small mb-3">Enjoy luxury resort hotels, world-class buffet dining, theater plays,
+                    and neon casinos.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.5</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Paris">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$999+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Paris, France</h4>
+                  <p class="text-muted small mb-3">Indulge in romantic strolls, gourmet bakeries, art museums, and
+                    fashion shopping landmarks.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.9</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Rome">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$850+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Rome, Italy</h4>
+                  <p class="text-muted small mb-3">Feast on world-class pasta, visit historical cathedrals, and snap
+                    pictures of classical ruins.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.8</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Sydney">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,200+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Sydney, Australia</h4>
+                  <p class="text-muted small mb-3">Climb the Harbour Bridge, take a ferry to Manly Beach, and taste
+                    fresh seafood dining.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.7</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/a1.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Tokyo">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,350+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Tokyo, Japan</h4>
+                  <p class="text-muted small mb-3">Immerse in anime shops, neon-soaked crossings, and peaceful Shinto
+                    shrines.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.9</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Cape Town">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,100+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Cape Town, South Africa</h4>
+                  <p class="text-muted small mb-3">Hike the flat-topped Table Mountain, visit vineyards, and watch
+                    coastal penguins.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.8</span>
+                    <button class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill" data-bs-toggle="modal"
+                      data-bs-target="#bookNowModal" data-destination="Cape Town"
+                      data-package="Cape Town Coastal Tour">Book Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img
+                    src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=600&q=80"
+                    class="card-img-top w-100 h-100 object-fit-cover" alt="Rio">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,050+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Rio de Janeiro, Brazil</h4>
+                  <p class="text-muted small mb-3">Snap pics of the Christ the Redeemer statue, dance Samba, and relax
+                    on Copacabana Beach.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.6</span>
+                   <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 13-->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c1.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Singapore">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$899+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Singapore</h4>
+                  <p class="text-muted small mb-3">Discover the futuristic Gardens by the Bay, luxury shopping at Orchard Road, and vibrant multicultural food scenes.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.8</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 14 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c2.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Auckland">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,450+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Auckland, New Zealand</h4>
+                  <p class="text-muted small mb-3">Explore volcanic harbors, enjoy world-class sailing, and embark on scenic wine-tasting tours on Waiheke Island.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.7</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 15 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c3.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Cairo">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$799+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Cairo, Egypt</h4>
+                  <p class="text-muted small mb-3">Marvel at the ancient Giza Pyramids, cruise down the historical Nile River, and explore bustling local spice bazaars.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.6</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 16-->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c4.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Bangkok">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$599+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Bangkok, Thailand</h4>
+                  <p class="text-muted small mb-3">Tour ornate shrines like the Grand Palace, experience vibrant river night markets, and ride local tuk-tuks.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.7</span>
+                   <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 17 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c5.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Vancouver">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$980+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Vancouver, Canada</h4>
+                  <p class="text-muted small mb-3">Enjoy a stunning mix of majestic mountains and ocean views, explore Stanley Park, and experience thriving arts.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.8</span>
+                    <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card 18 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover h-100 rounded-4 overflow-hidden bg-white border-0 shadow-sm">
+                <div class="card-img-top-wrap" style="height: 220px;">
+                  <img src="./images/c6.jpg" class="card-img-top w-100 h-100 object-fit-cover" alt="Dubai">
+                  <span
+                    class="badge bg-primary badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$1,250+</span>
+                </div>
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-2">Dubai, UAE</h4>
+                  <p class="text-muted small mb-3">Experience luxury shopping, ultra-modern architecture like the Burj Khalifa, and thrilling desert dunes safaris.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary small star-rating"><i class="bi bi-star-fill text-warning me-1"></i>
+                      4.9</span>
+                     <a href="./booknow.html" class="btn btn-outline-primary btn-ripple btn-sm px-3 rounded-pill">Book This Trip</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Destination Details & Best Time to Visit -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+            class="img-fluid rounded-4 shadow-sm w-100" alt="Travel Plan">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-primary fw-bold text-uppercase tracking-wider">Plan Wisely</span>
+          <h2 class="display-5 fw-bold mt-2 mb-4">Best Time to Visit</h2>
+          <p class="text-muted mb-4">Timing is everything. Depending on the destination, you might encounter tropical
+            monsoon seasons, intense heat waves, or perfect winter ski snows. Here's a quick reference checklist
+            compiled by our travel guides:</p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <h5 class="fw-bold mb-0">Europe</h5>
+              </div>
+              <p class="text-muted small">Spring (May-June) & Autumn (Sept-Oct) offer optimal weather with fewer crowds.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <h5 class="fw-bold mb-0">Southeast Asia</h5>
+              </div>
+              <p class="text-muted small">Dry Season (November to February) is cool, pleasant, and perfect for beaches.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <h5 class="fw-bold mb-0">North America</h5>
+              </div>
+              <p class="text-muted small">Summer (June-August) for hiking, and December-March for snow resort areas.</p>
+            </div>
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                <h5 class="fw-bold mb-0">Caribbean & Maldives</h5>
+              </div>
+              <p class="text-muted small">December to April represents prime sunny weather with minimal rainfall.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Travel Guides & Popular Attractions -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Travel Guides -->
+        <div class="col-lg-6 fade-in-left">
+          <h2 class="display-6 fw-bold mb-4">Meet Our Local Guides</h2>
+          <p class="text-muted mb-4">Our professional, certified multi-lingual tour guides are native to each
+            destination. They guide you with deep passion, rich knowledge, and extreme safety.</p>
+          <div class="row g-3">
+            <!-- Guide 1 -->
+            <div class="col-sm-6 fade-in-up delay-1">
+              <div
+                class="d-flex align-items-center gap-3 p-3 bg-white shadow-sm rounded-4 border-start border-primary border-3 card-hover-glow">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80"
+                  class="rounded-circle object-fit-cover icon-bounce" style="width: 55px; height: 55px;" alt="Emma">
+                <div>
+                  <h6 class="fw-bold mb-0">Emma Watson</h6>
+                  <span class="text-muted small">European History Specialist</span>
+                </div>
+              </div>
+            </div>
+            <!-- Guide 2 -->
+            <div class="col-sm-6 fade-in-up delay-2">
+              <div
+                class="d-flex align-items-center gap-3 p-3 bg-white shadow-sm rounded-4 border-start border-info border-3 card-hover-glow">
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=80"
+                  class="rounded-circle object-fit-cover icon-bounce" style="width: 55px; height: 55px;" alt="Carlos">
+                <div>
+                  <h6 class="fw-bold mb-0">Carlos Silva</h6>
+                  <span class="text-muted small">Latin America Trekking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Attractions -->
+        <div class="col-lg-6 fade-in-right">
+          <h2 class="display-6 fw-bold mb-4">Popular Attractions List</h2>
+          <p class="text-muted mb-4">Don't miss out on these absolute top highlights and unique activities handpicked by
+            our travel experts:</p>
+          <div class="list-group list-group-flush shadow-sm rounded-4 overflow-hidden">
+            <div
+              class="list-group-item d-flex justify-content-between align-items-center p-3 bg-white compare-table tr">
+              <div>
+                <h6 class="fw-bold mb-0">Eiffel Tower Summit Tour</h6>
+                <span class="text-muted small">Skip the line access with champagne dinner included.</span>
+              </div>
+              <span class="badge bg-primary-subtle text-primary py-2 px-3 rounded-pill badge-shimmer">$85</span>
+            </div>
+            <div
+              class="list-group-item d-flex justify-content-between align-items-center p-3 bg-white compare-table tr">
+              <div>
+                <h6 class="fw-bold mb-0">Kyoto Bamboo Forest Walks</h6>
+                <span class="text-muted small">Sunrise meditation tour with a Buddhist monk guidance.</span>
+              </div>
+              <span class="badge bg-primary-subtle text-primary py-2 px-3 rounded-pill badge-shimmer">$45</span>
+            </div>
+            <div
+              class="list-group-item d-flex justify-content-between align-items-center p-3 bg-white compare-table tr">
+              <div>
+                <h6 class="fw-bold mb-0">Maldives Catamaran Sunset Cruise</h6>
+                <span class="text-muted small">Snorkeling with green sea turtles and beachside BBQ buffet.</span>
+              </div>
+              <span class="badge bg-primary-subtle text-primary py-2 px-3 rounded-pill badge-shimmer">$120</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FAQ Accordion -->
+  <section class="py-5 bg-light">
+    <div class="container col-lg-8 mx-auto">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">Answers to your most commonly asked questions about booking, safety, and packages.</p>
+      </div>
+
+      <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+        <!-- Item 1 -->
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Q1. How do I book a tour package with WanderWorld?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              Booking is extremely simple! Click on the "Book Now" button on the navbar, fill out your traveler details,
+              select your preferred destination and package, and submit. One of our destination managers will reach out
+              to you within 24 hours to confirm prices and final schedules.
+            </div>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="accordion-item border-0 border-top">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Q2. Is travel insurance included in standard packages?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              Yes, basic travel insurance (medical emergency assistance, bag loss, trip delays) is fully included in our
+              standard and premium packages. Basic plans can be upgraded to comprehensive full coverage during booking
+              confirmation.
+            </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="accordion-item border-0 border-top">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree">
+              Q3. What is your refund and cancellation policy?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              We offer full refunds for cancellations made at least 30 days prior to the travel date. For cancellations
+              made between 15-30 days, a 50% refund is issued. Cancellations within 14 days of departure are
+              non-refundable but can be rescheduled under flexible credit options.
+            </div>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="accordion-item border-0 border-top">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+              aria-controls="collapseFour">
+              Q4. Do you assist with international travel visas?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              Absolutely! Our visa assistance team reviews all your documentation, sets up appointments at the
+              respective embassies, and prepares interview templates for hassle-free visa approvals.
+            </div>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="accordion-item border-0 border-top">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+              aria-controls="collapseFive">
+              Q5. Can I design custom private tour packages?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              Yes, we specialize in private bespoke travel planning. Simply fill out our Book Now contact details or
+              reach out through our Contact page, and our local travel planners will draft a custom route matching your
+              desires.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Travel Map Continent Section -->
+  <section class="py-5 bg-white wave-divider">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Global Footprint</span>
+        <h2 class="display-5 fw-bold mt-2">Browse by Continent</h2>
+        <p class="text-muted col-md-6 mx-auto">Explore destinations and curated itineraries across the globe. Click on
+          any continent to see our packages.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- North America -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-up delay-1">
+          <div class="continent-card card-hover-glow text-center">
+            <div class="continent-icon text-primary"><i class="bi bi-globe-americas"></i></div>
+            <h5 class="fw-bold mb-1 fs-6">North America</h5>
+            <span class="text-muted small">12 Packages</span>
+          </div>
+        </div>
+        <!-- South America -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-up delay-2">
+          <div class="continent-card card-hover-glow text-center">
+            <div class="continent-icon text-success"><i class="bi bi-globe-americas"></i></div>
+            <h5 class="fw-bold mb-1 fs-6">South America</h5>
+            <span class="text-muted small">8 Packages</span>
+          </div>
+        </div>
+        <!-- Europe -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-up delay-3">
+          <div class="continent-card card-hover-glow text-center">
+            <div class="continent-icon text-info"><i class="bi bi-globe-europe-africa"></i></div>
+            <h5 class="fw-bold mb-1 fs-6">Europe</h5>
+            <span class="text-muted small">24 Packages</span>
+          </div>
+        </div>
+        <!-- Asia -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-up delay-4">
+          <div class="continent-card card-hover-glow text-center">
+            <div class="continent-icon text-warning"><i class="bi bi-globe-asia-australia"></i></div>
+            <h5 class="fw-bold mb-1 fs-6">Asia</h5>
+            <span class="text-muted small">18 Packages</span>
+          </div>
+        </div>
+        <!-- Africa -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-up delay-5">
+          <div class="continent-card card-hover-glow text-center">
+            <div class="continent-icon text-danger"><i class="bi bi-globe-europe-africa"></i></div>
+            <h5 class="fw-bold mb-1 fs-6">Africa</h5>
+            <span class="text-muted small">10 Packages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering
+            flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New
+            York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567
+          </p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i>
+            contact@wanderworld.com</p>
+
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email"
+              class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50"
+              placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

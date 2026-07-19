@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander World</title>
+    <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link active" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-circle me-1"></i> Login
+          </button>
+        </a>
+          
+        <a href="./booknow.html">
+          <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+            Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Mini Hero Banner -->
+  <div class="mini-hero wave-divider" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container mini-hero-content text-white">
+      <h1 class="display-4 text-white fw-bold mb-2">Luxury & Budget Hotels</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Hotels</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hotel Search Form -->
+  <div class="container position-relative" style="margin-top: -45px; z-index: 10;">
+    <div class="bg-white rounded-4 shadow-lg p-4">
+      <form id="hotelSearchForm">
+        <div class="row g-2">
+          <div class="col-md-3">
+            <label class="form-label text-secondary fw-semibold small">Destination City</label>
+            <input type="text" class="form-control bg-light border-0" placeholder="Where do you want to stay?" required>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label text-secondary fw-semibold small">Check-In</label>
+            <input type="date" class="form-control bg-light border-0" required>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label text-secondary fw-semibold small">Check-Out</label>
+            <input type="date" class="form-control bg-light border-0" required>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label text-secondary fw-semibold small">Guests</label>
+            <select class="form-select bg-light border-0">
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4+ Guests</option>
+            </select>
+          </div>
+          <div class="col-md-1 d-flex align-items-end">
+            <button type="submit" class="btn btn-gradient w-100 py-2.5 rounded-3"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hotel Grid Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Premium Stays</span>
+        <h2 class="display-5 fw-bold mt-2">Find Your Ideal Hotel</h2>
+        <p class="text-muted col-md-6 mx-auto">From high-end 5-star beachfront resorts to cozy budget city center guesthouses, book with WanderWorld.</p>
+      </div>
+
+       <div class="tab-content" id="hotelTabContent">
+        <!-- ALL STAYS -->
+        <div class="tab-pane fade show active" id="all-h-pane" role="tabpanel" aria-labelledby="all-h-tab" tabindex="0">
+          <div class="row g-4">
+            <!-- Luxury Cards (1 to 6) -->
+            <!-- Hotel 1 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Ritz Bali">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$350 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Ritz-Carlton Marina</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Resort</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Ritz-Carlton Marina, Bali</h4>
+                  <p class="text-muted small">Cliffside views of the Indian ocean, private infinity pool villas, and white sand beach access.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-wifi icon-float"></i> Free Wi-Fi</span>
+                    <span><i class="bi bi-droplet-half icon-bounce"></i> Private Pool</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Bali" data-package="Ritz-Carlton Marina stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 2 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="The Plaza">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$550 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">The Plaza Hotel</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Hotel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">The Plaza Hotel, New York</h4>
+                  <p class="text-muted small">Historic NYC landmark bordering Central Park. High-end butler service and iconic champagne rooms.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Dining</span>
+                    <span><i class="bi bi-suit-club icon-bounce"></i> Butler service</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="New York" data-package="The Plaza Hotel Stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 3 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Shangri-La Tokyo">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$420 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Shangri-La Tokyo</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.8 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Hotel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Shangri-La Tokyo, Japan</h4>
+                  <p class="text-muted small">Overlooking the Tokyo imperial palace. Luxurious indoor heated pools and award-winning spas.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-lightning icon-float"></i> Spa</span>
+                    <span><i class="bi bi-train-front icon-bounce"></i> Central location</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Tokyo" data-package="Shangri-La Tokyo stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 4 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Mirage Dubai">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$480 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Royal Mirage Resort</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.8 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Resort</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Royal Mirage Resort, Dubai</h4>
+                  <p class="text-muted small">Palatial Arabic styling, lush private gardens, temperature controlled swimming lagoons.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-tree icon-float"></i> Gardens</span>
+                    <span><i class="bi bi-droplet icon-bounce"></i> Pools</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Dubai" data-package="Royal Mirage stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 5 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Lake Como Villa">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$650 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Villa d'Este</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 5.0 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Resort</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 5.0</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Villa d'Este, Lake Como</h4>
+                  <p class="text-muted small">Lakefront views of the Italian alps, classical renaissance architecture, and private boats rental.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-anchor icon-float"></i> Boating</span>
+                    <span><i class="bi bi-brightness-high icon-bounce"></i> Lakefront</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Lake Como" data-package="Villa d'Este stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 6 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Maldives stay">
+                  <span class="badge bg-danger badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill">$850 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Soneva Jani Overwater</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Resort</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Soneva Jani Overwater</h4>
+                  <p class="text-muted small">Ultra premium overwater villas, retractable roofs, private water slides, and stargazing observatories.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-compass icon-float"></i> Observatory</span>
+                    <span><i class="bi bi-water icon-bounce"></i> Ocean View</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Maldives" data-package="Soneva Jani stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Budget Cards (7 to 12) -->
+            <!-- Hotel 7 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Ibis Paris">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$95 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Ibis Styles Center</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.4 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Boutique</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.4</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Ibis Styles Center, Paris</h4>
+                  <p class="text-muted small">Clean rooms, continental breakfasts, just a brief walking distance from Paris metro connections.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-wifi icon-float"></i> Free Wifi</span>
+                    <span><i class="bi bi-compass icon-bounce"></i> Metro distance</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Paris" data-package="Ibis Styles stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 8 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Pod 39 NYC">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$110 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Pod 39 Hotel</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.3 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Boutique</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.3</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Pod 39 Hotel Manhattan</h4>
+                  <p class="text-muted small">Compact, functional micro-rooms. Rooftop bar lounge, communal gaming rooms in midtown NYC.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Rooftop bar</span>
+                    <span><i class="bi bi-building icon-bounce"></i> Midtown</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="New York" data-package="Pod 39 stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 9 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Khaosan Palace">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$45 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Khaosan Palace</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.2 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Stay</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.2</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Khaosan Palace Hotel, Bangkok</h4>
+                  <p class="text-muted small">Rooftop swimming pools, clean basic rooms, right in the center of Bangkok's vibrant night streets.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-water icon-float"></i> Pool</span>
+                    <span><i class="bi bi-sun icon-bounce"></i> Nightlife</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Bangkok" data-package="Khaosan Palace stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 10 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-1">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1529290130-4ca3753253ae?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Alpina Swiss">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$125 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Hotel Alpina</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.5 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Boutique</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.5</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Hotel Alpina Grindelwald</h4>
+                  <p class="text-muted small">Traditional cozy wooden alpine chalets, local Swiss dining options, and table mountain scenery views.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-snow icon-float"></i> Mountain views</span>
+                    <span><i class="bi bi-house icon-bounce"></i> Chalet style</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Switzerland" data-package="Alpina Grindelwald stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel 11 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-2">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Bondi Beach Motel">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$85 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Bondi Beach Motel</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.3 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Motel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.3</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Bondi Beach Motel, Sydney</h4>
+                  <p class="text-muted small">Surfboard racks, shared kitchen facilities, just minutes walking from the famous Bondi sands.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-sun icon-float"></i> Surf access</span>
+                    <span><i class="bi bi-people icon-bounce"></i> Shared Kitchen</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Sydney" data-package="Bondi Beach stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- Hotel 12 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80" class="w-100 h-100 object-fit-cover" alt="Casa Rio">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$65 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Casa da Colina</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.4 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Budget Guesthouse</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.4</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Casa da Colina, Rio</h4>
+                  <p class="text-muted small">Colorful guest rooms on Rio hillsides, local breakfast fruits buffet, and beautiful ocean sunsets.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Fresh Breakfast</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Sunset views</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Rio de Janeiro" data-package="Casa da Colina stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 13-->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h1.jpg" class="w-100 h-100 object-fit-cover" alt="Grand Palace Hotel">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$180 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Grand Palace Tokyo</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.8 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Hotel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Grand Palace Hotel, Tokyo</h4>
+                  <p class="text-muted small">Experience luxury rooms overlooking the Imperial Palace gardens, premium spa therapies, and a traditional sushi bar.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Palace views</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Premium Spa</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Tokyo" data-package="Grand Palace stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 14 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h2.jpg" class="w-100 h-100 object-fit-cover" alt="Alpine Heights Lodge">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$220 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Alpine Heights Lodge</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Mountain Lodge</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Alpine Heights Lodge, Swiss Alps</h4>
+                  <p class="text-muted small">Cozy wood-paneled suites with panoramic mountain views, fireside lounge, and direct ski-in/ski-out chalet access.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Fireside Lounge</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Ski Access</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Swiss Alps" data-package="Alpine Heights stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 15 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h3.jpg" class="w-100 h-100 object-fit-cover" alt="Lagoon Breeze Resort">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$350 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Lagoon Breeze Maldives</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.9 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Overwater Resort</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Lagoon Breeze Resort, Maldives</h4>
+                  <p class="text-muted small">Overwater villas with direct turquoise lagoon access, private infinity pool, coral reef snorkeling, and beach BBQ.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Lagoon Access</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Private Pool</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Maldives" data-package="Lagoon Breeze stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 16 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h4.jpg" class="w-100 h-100 object-fit-cover" alt="Safari Heights Camp">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$190 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Safari Heights Kenya</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.7 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Safari Camp</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.7</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Safari Heights Camp, Kenya</h4>
+                  <p class="text-muted small">Elegant canvas tents overlooking safari watering holes, daily guided game drives, and local cuisine under the stars.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Wildlife views</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Guided Safaris</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Kenya" data-package="Safari Heights stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 17 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h5.jpg" class="w-100 h-100 object-fit-cover" alt="The Broadway Landmark">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$165 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Broadway Landmark NY</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.6 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Premium City Hotel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.6</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">The Broadway Landmark, New York</h4>
+                  <p class="text-muted small">Modern high-rise suites steps away from Times Square and Broadway theaters, rooftop cocktail lounge, and fitness center.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Times Square views</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Rooftop Lounge</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="New York City" data-package="Broadway Landmark stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- Hotel 18 -->
+            <div class="col-md-6 col-lg-4 fade-in-up delay-3">
+              <div class="card card-hover-zoom h-100 border-0 shadow-sm bg-white rounded-4 overflow-hidden">
+                <div class="card-img-top-wrap" style="height: 200px;">
+                  <img src="./images/h6.jpg" class="w-100 h-100 object-fit-cover" alt="Marina Bay Premium">
+                  <span class="badge bg-info badge-shimmer position-absolute top-0 end-0 m-3 py-2 px-3 rounded-pill text-dark">$280 / night</span>
+                  <div class="hover-overlay">
+                    <h5 class="fw-bold mb-1 text-white">Marina Bay Premium</h5>
+                    <p class="small text-white-50 mb-0"><i class="bi bi-star-fill text-warning me-1"></i> 4.8 rating</p>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="text-primary fw-bold text-uppercase small">Luxury Hotel</span>
+                    <span class="text-warning star-rating"><i class="bi bi-star-fill"></i> 4.8</span>
+                  </div>
+                  <h4 class="fw-bold mb-3">Marina Bay Premium, Singapore</h4>
+                  <p class="text-muted small">Stunning skyline rooms, access to the famous rooftop infinity pool, multiple Michelin-starred restaurants, and high-end spas.</p>
+                  <hr class="opacity-25">
+                  <div class="d-flex justify-content-between align-items-center text-muted small mb-3">
+                    <span><i class="bi bi-cup-hot icon-float"></i> Rooftop Pool</span>
+                    <span><i class="bi bi-image icon-bounce"></i> Sky Dining</span>
+                  </div>
+                  <button class="btn btn-primary btn-ripple w-100 py-2.5 rounded-3" data-bs-toggle="modal" data-bs-target="#bookNowModal" data-destination="Singapore" data-package="Marina Bay stay">Check Availability</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+      </div>
+    </section>
+
+
+  <!-- Hotel Amenities Grid -->
+  <section class="py-5 bg-light wave-divider-light">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Top Standards</span>
+        <h2 class="display-5 fw-bold mt-2 text-gradient">Core Amenities We Guarantee</h2>
+      </div>
+      <div class="row g-4 text-center">
+        <!-- 1 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-1">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-wifi"></i></div>
+            <h5 class="fw-bold h6 mb-0">Free High-Speed Wi-Fi</h5>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-2">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-water"></i></div>
+            <h5 class="fw-bold h6 mb-0">Swimming Pools</h5>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-3">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-lightning-charge"></i></div>
+            <h5 class="fw-bold h6 mb-0">Health Gyms & Spa</h5>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-4">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-bell"></i></div>
+            <h5 class="fw-bold h6 mb-0">24/7 Room Service</h5>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-5">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-p-circle"></i></div>
+            <h5 class="fw-bold h6 mb-0">Free Valet Parking</h5>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="col-6 col-md-4 col-lg-2 fade-in-scale delay-6">
+          <div class="amenity-card">
+            <div class="amenity-icon text-primary"><i class="bi bi-cup-hot"></i></div>
+            <h5 class="fw-bold h6 mb-0">Complementary Breakfast</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Hotel Room Pricing Cards -->
+  <section class="py-5">
+    <div class="container col-xl-9 mx-auto">
+      <div class="text-center mb-5 fade-in-up">
+        <h2 class="display-5 fw-bold text-gradient">Room Category Rates</h2>
+        <p class="text-muted">Standard daily price configurations across our partner hotels networks.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Room 1 -->
+        <div class="col-md-4 fade-in-up delay-1">
+          <div class="card border-0 bg-white shadow-sm p-4 rounded-4 text-center card-hover-tilt">
+            <h5 class="fw-bold text-muted text-uppercase tracking-wider mb-2">Standard Room</h5>
+            <h3 class="display-6 fw-bold text-primary mb-3">$99 <span class="fs-6 text-muted">/ night</span></h3>
+            <p class="text-muted small">Queen size bed, private shower room, flat TV, writing table, and standard workspace views.</p>
+            <hr class="opacity-25">
+            <button class="btn btn-outline-primary btn-ripple w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">Request Standard</button>
+          </div>
+        </div>
+        <!-- Room 2 -->
+        <div class="col-md-4 fade-in-up delay-2">
+          <div class="card border-0 bg-white shadow-sm p-4 rounded-4 text-center card-hover-tilt">
+            <h5 class="fw-bold text-muted text-uppercase tracking-wider mb-2">Executive Suite</h5>
+            <h3 class="display-6 fw-bold text-primary mb-3">$199 <span class="fs-6 text-muted">/ night</span></h3>
+            <p class="text-muted small">King size bed, connected living hall space, private balcony terrace, and mini bar fridge facilities.</p>
+            <hr class="opacity-25">
+            <button class="btn btn-outline-primary btn-ripple w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">Request Suite</button>
+          </div>
+        </div>
+        <!-- Room 3 -->
+        <div class="col-md-4 fade-in-up delay-3">
+          <div class="card border-0 bg-white shadow-sm p-4 rounded-4 text-center card-hover-tilt">
+            <h5 class="fw-bold text-muted text-uppercase tracking-wider mb-2">Presidential Suite</h5>
+            <h3 class="display-6 fw-bold text-primary mb-3">$450 <span class="fs-6 text-muted">/ night</span></h3>
+            <p class="text-muted small">Panoramic penthouse views, private outdoor jacuzzi spa pool, full dining kitchen, and dedicated butler.</p>
+            <hr class="opacity-25">
+            <button class="btn btn-outline-primary btn-ripple w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">Request Presidential</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Customer Reviews -->
+  <section class="py-5 bg-light wave-divider-light">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <h2 class="display-5 fw-bold">Recent Hotel Reviews</h2>
+      </div>
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-4 fade-in-up delay-1">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="text-warning mb-2 star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="text-muted small mb-4">"The Ritz-Carlton stay in Bali was simply out of this world. Our private pool villa felt extremely premium, and the staff offered top-notch hospitable dining service!"</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&h=80&q=80" class="rounded-circle object-fit-cover icon-bounce" style="width: 45px; height: 45px;" alt="Sarah Miller">
+              <div>
+                <h6 class="fw-bold mb-0">Sarah Miller</h6>
+                <span class="text-muted small">Stayed at Ritz Bali</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="col-md-4 fade-in-up delay-2">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="text-warning mb-2 star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            <p class="text-muted small mb-4">"I stayed at Pod 39 NYC for a weekend business trip. The rooms are tiny but extremely clean, modern, and noise-proof. The rooftop bar is highly recommended!"</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" class="rounded-circle object-fit-cover icon-bounce" style="width: 45px; height: 45px;" alt="David Chen">
+              <div>
+                <h6 class="fw-bold mb-0">David Chen</h6>
+                <span class="text-muted small">Stayed at Pod 39 NYC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="col-md-4 fade-in-up delay-3">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="text-warning mb-2 star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p class="text-muted small mb-4">"Villa d'Este at Lake Como was worth every dollar. Waking up to panoramic alpine lake views and walking through the historical renaissance palace gardens was surreal."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" class="rounded-circle object-fit-cover icon-bounce" style="width: 45px; height: 45px;" alt="Emma Watson">
+              <div>
+                <h6 class="fw-bold mb-0">Emma Watson</h6>
+                <span class="text-muted small">Stayed at Villa d'Este</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotel Booking Section CTA -->
+  <section class="py-5 bg-primary text-white text-center parallax-bg" style="background: var(--gradient-primary) !important; background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+    <div class="container col-md-8 position-relative fade-in-scale">
+      <h2 class="display-5 fw-bold mb-3">Found Your Dream Resort?</h2>
+      <p class="lead mb-4">Get custom discounted corporate and family rates for seasonal hotel bookings. Submit your traveler requirements details right now.</p>
+     <a href="./booknow.html"><button class="btn btn-light btn-pulse btn-ripple btn-lg text-primary fw-bold px-5 py-3 rounded-pill shadow" >Request Booking Details</button></a> 
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567</p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> contact@wanderworld.com</p>
+          
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

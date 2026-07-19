@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander World</title>
+    <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-circle me-1"></i> Login
+          </button>
+        </a>
+          
+        <a href="./booknow.html">
+          <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+            Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="booknow-wrapper">
+
+    <!-- LEFT HERO PANEL -->
+    <div class="booknow-hero">
+      <!-- Brand -->
+      <a href="index.html" class="booknow-brand">
+        <i class="bi bi-globe-americas fs-3"></i>
+        WanderWorld
+      </a>
+
+      <!-- Center content -->
+      <div>
+        <p class="booknow-tagline">Start your<br><span>adventure</span><br>today.</p>
+        <ul class="booknow-benefits">
+          <li><i class="bi bi-shield-fill-check"></i> 100% Secure Booking &amp; Privacy</li>
+          <li><i class="bi bi-arrow-counterclockwise"></i> Free Cancellation within 48 Hours</li>
+          <li><i class="bi bi-cash-coin"></i> Best Price Guarantee — No Hidden Fees</li>
+          <li><i class="bi bi-headset"></i> 24/7 Live Support Before &amp; During Trip</li>
+          <li><i class="bi bi-star-fill"></i> 4.9★ Average Rating from 50k+ Travelers</li>
+        </ul>
+      </div>
+
+      <!-- Footer -->
+      <p class="booknow-hero-footer mb-0">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+    </div>
+
+    <!-- RIGHT FORM PANEL -->
+    <div class="booknow-form-panel">
+      <div class="booknow-form-inner">
+
+        <!-- Back link -->
+        <a href="index.html" class="back-link">
+          <i class="bi bi-arrow-left-short fs-5"></i> Back to Home
+        </a>
+
+        <h2 class="mb-1 fw-bold">Book Your Dream Trip</h2>
+        <p class="text-muted mb-4" style="font-size:0.93rem;">Fill in the form details below and our travel experts will confirm your custom package within 24 hours.</p>
+
+        <!-- Booking Form -->
+        <form id="bookingForm" action="#" method="post" novalidate>
+
+          <!-- Personal Info -->
+          <div class="form-divider">
+            <span>👤 Personal Information</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="bn-label" for="bkName">Full Name *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-person-fill bn-icon"></i>
+                <input type="text" class="bn-input" id="bkName" placeholder="John Doe" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkEmail">Email Address *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-envelope-fill bn-icon"></i>
+                <input type="email" class="bn-input" id="bkEmail" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkPhone">Phone Number *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-telephone-fill bn-icon"></i>
+                <input type="tel" class="bn-input" id="bkPhone" placeholder="+1 (555) 000-0000" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkCountry">Country / Nationality</label>
+              <div class="bn-input-group">
+                <i class="bi bi-flag-fill bn-icon"></i>
+                <select class="bn-input" id="bkCountry">
+                  <option value="" disabled selected>Select country</option>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Australia</option>
+                  <option>India</option>
+                  <option>Germany</option>
+                  <option>France</option>
+                  <option>UAE</option>
+                  <option>Singapore</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trip Details -->
+          <div class="form-divider">
+            <span>🌍 Trip Details</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="bn-label" for="bkDestination">Preferred Destination *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-geo-alt-fill bn-icon"></i>
+                <select class="bn-input" id="bkDestination" required>
+                  <option value="" disabled selected>Select destination</option>
+                  <option>Bali, Indonesia</option>
+                  <option>Swiss Alps, Switzerland</option>
+                  <option>Tokyo, Japan</option>
+                  <option>Paris, France</option>
+                  <option>Rome, Italy</option>
+                  <option>Sydney, Australia</option>
+                  <option>Maldives</option>
+                  <option>Santorini, Greece</option>
+                  <option>Taj Mahal, India</option>
+                  <option>Dubai, UAE</option>
+                  <option>Bora Bora, French Polynesia</option>
+                  <option>Other / Custom Route</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkPackage">Tour Package</label>
+              <div class="bn-input-group">
+                <i class="bi bi-box-seam-fill bn-icon"></i>
+                <select class="bn-input" id="bkPackage">
+                  <option value="" disabled selected>Select package</option>
+                  <option>Bali Tropical Escape — $1,099/person</option>
+                  <option>Swiss Alps Ski Adventure — $1,899/person</option>
+                  <option>Tokyo City Lights Explorer — $1,399/person</option>
+                  <option>Majestic Maldives Paradise — $1,299/person</option>
+                  <option>Golden Triangle India — $899/person</option>
+                  <option>Highlights of Greece — $1,499/person</option>
+                  <option>Dubai Royal Holiday — $1,599/person</option>
+                  <option>I want a custom package</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkDeparture">Departure Date *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-calendar-check-fill bn-icon"></i>
+                <input type="date" class="bn-input" id="bkDeparture" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkReturn">Return Date</label>
+              <div class="bn-input-group">
+                <i class="bi bi-calendar-x-fill bn-icon"></i>
+                <input type="date" class="bn-input" id="bkReturn">
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkTravelers">Number of Travelers *</label>
+              <div class="bn-input-group">
+                <i class="bi bi-people-fill bn-icon"></i>
+                <select class="bn-input" id="bkTravelers" required>
+                  <option value="" disabled selected>Select</option>
+                  <option>1 Person (Solo)</option>
+                  <option>2 Persons (Couple)</option>
+                  <option>3 Persons</option>
+                  <option>4 Persons (Family)</option>
+                  <option>5–8 Persons (Group)</option>
+                  <option>9+ Persons (Large Group)</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkBudget">Budget Range (Per Person)</label>
+              <div class="bn-input-group">
+                <i class="bi bi-currency-dollar bn-icon"></i>
+                <select class="bn-input" id="bkBudget">
+                  <option value="" disabled selected>Select budget</option>
+                  <option>Under $500</option>
+                  <option>$500 – $1,000</option>
+                  <option>$1,000 – $2,000</option>
+                  <option>$2,000 – $3,500</option>
+                  <option>$3,500 – $5,000</option>
+                  <option>$5,000+ (Luxury)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences -->
+          <div class="form-divider">
+            <span>✨ Preferences &amp; Requests</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="bn-label" for="bkRoomType">Room Preference</label>
+              <div class="bn-input-group">
+                <i class="bi bi-building-fill bn-icon"></i>
+                <select class="bn-input" id="bkRoomType">
+                  <option value="" disabled selected>Select room type</option>
+                  <option>Standard Double Room</option>
+                  <option>Deluxe Room</option>
+                  <option>Junior Suite</option>
+                  <option>Executive Suite</option>
+                  <option>Overwater Villa / Bungalow</option>
+                  <option>Private Villa</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkTripType">Trip Type</label>
+              <div class="bn-input-group">
+                <i class="bi bi-heart-fill bn-icon"></i>
+                <select class="bn-input" id="bkTripType">
+                  <option value="" disabled selected>Select type</option>
+                  <option>Honeymoon / Romantic</option>
+                  <option>Family Vacation</option>
+                  <option>Adventure / Trekking</option>
+                  <option>Cultural Heritage</option>
+                  <option>Beach &amp; Relaxation</option>
+                  <option>Business + Leisure</option>
+                  <option>Solo Travel</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="bn-label" for="bkRequests">Special Requests / Additional Notes</label>
+              <div class="bn-input-group">
+                <i class="bi bi-chat-dots-fill bn-icon top-icon"></i>
+                <textarea class="bn-input" id="bkRequests" rows="4" placeholder="e.g. Vegetarian meals, anniversary surprise, wheelchair access, airport pickup, specific hotels, visa help needed..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+           <br>
+            <a href="./thankyou.html" class="btn btn-gradient btn-lg w-100 py-3 rounded-pill" > <i class="bi bi-send-fill"></i> Submit The Request</a>
+        <br>   
+        <br>
+          <p class="text-center text-muted mt-3 mb-0" style="font-size:0.8rem;">
+            <i class="bi bi-lock-fill text-success me-1"></i>
+            Your data is encrypted &amp; secure. <strong>No payment</strong> is collected until your trip is confirmed.
+          </p>
+
+        </form>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567</p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> contact@wanderworld.com</p>
+          
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

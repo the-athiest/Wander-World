@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander World</title>
+    <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-circle me-1"></i> Login
+          </button>
+        </a>
+          
+        <a href="./booknow.html">
+          <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+            Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Mini Hero Banner -->
+  <div class="mini-hero" style="background-image: url(./images/01.jpg);">
+    <div class="container mini-hero-content text-white">
+      <h1 class="display-4 text-white fw-bold mb-2">Travel Photo Gallery</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+
+ <!-- Travel Photo Gallery Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Visual Memories</span>
+        <h2 class="display-5 fw-bold mt-2 text-gradient">Moments of Joy</h2>
+        <p class="text-muted col-md-6 mx-auto">Click on any travel moment capture to see an expanded, high-resolution preview.</p>
+      </div>
+
+      
+<div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-4" id="galleryGrid">
+        <!-- Adventure (1 to 6) -->
+        <div class="col gallery-card fade-in-scale delay-1" data-category="adventure">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Machu Picchu Trek" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Machu Picchu Trek</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="adventure">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Wild Camping" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Camping under Stars</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-3" data-category="adventure">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="./images/g1.jpg" class="w-100 h-100 object-fit-cover" alt="River Rafting" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Whitewater Rafting</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-4" data-category="adventure">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Alpine Skiing" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Alps Ski Slopes</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-1" data-category="adventure">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Paragliding" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Tandem Paragliding</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="adventure">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Scuba Reefs" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Coral Scuba Reefs</h5>
+              <span class="small text-white-50">Adventure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nature (7 to 12) -->
+        <div class="col gallery-card fade-in-scale delay-1" data-category="nature">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Foggy Forest" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Foggy Forest Valleys</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="nature">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Woodland River" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Woodland Forest River</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-3" data-category="nature">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="./images/g2.jpg" class="w-100 h-100 object-fit-cover" alt="Autumn Lake" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Autumn Lake Sunset</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-4" data-category="nature">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="./images/g3.jpg" class="w-100 h-100 object-fit-cover" alt="Green hills" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Green Rolling Hills</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-1" data-category="nature">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1433832597046-4f10e10ac764?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Hot Air Balloon" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Cappadocia Balloons</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="nature">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Forest Light" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Sunbeams in Forest</h5>
+              <span class="small text-white-50">Nature</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beach (13 to 18) -->
+        <div class="col gallery-card fade-in-scale delay-1" data-category="beach">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Golden Sand" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Golden Sand Shores</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="beach">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Umbrella sunset" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Palms & Umbrella Sunset</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-3" data-category="beach">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Infinity Pool" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Resort Infinity Pool</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-4" data-category="beach">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Sydney Beach" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Bondi Beach Wave</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-1" data-category="beach">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Bora palms" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Bora Bora Palm Groves</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="beach">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Hammock beach" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Hammock Palm Sunset</h5>
+              <span class="small text-white-50">Beach</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mountain (19 to 24) -->
+        <div class="col gallery-card fade-in-scale delay-1" data-category="mountain">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Mount peaks" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Snowy Mountain Peaks</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="mountain">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="./images/g4.jpg" class="w-100 h-100 object-fit-cover" alt="Misty mountains" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Misty Alps Ridges</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-3" data-category="mountain">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Star peaks" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Starry Sky Peaks</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-4" data-category="mountain">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Rio hills" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Corcovado Mountain View</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-1" data-category="mountain">
+          <div class="gallery-item overlay-slide-up shadow-sm">
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Mount Fuji" style="min-height: 200px;">
+            <div class="overlay-content p-3 text-center">
+              <h5 class="fw-bold mb-0 text-white">Majestic Mount Fuji</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+        <div class="col gallery-card fade-in-scale delay-2" data-category="mountain">
+          <div class="gallery-item overlay-curtain shadow-sm">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&h=450&q=80" class="w-100 h-100 object-fit-cover" alt="Yosemite dome" style="min-height: 200px;">
+            <div class="curtain-content p-3 w-100">
+              <h5 class="fw-bold mb-0 text-white">Yosemite Granite Cliffs</h5>
+              <span class="small text-white-50">Mountain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+<!-- Video Showcase Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Video Travel Diaries</span>
+        <h2 class="display-5 fw-bold mt-2">Watch Traveler Stories</h2>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 fade-in-left">
+          <div class="position-relative shadow rounded-4 overflow-hidden" style="height: 350px;">
+            <video src="./images/vid.mp4" autoplay muted controls class="w-100 h-100 object-fit-cover animate-pulse" > </video>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-in-right">
+          <h3 class="display-6 fw-bold mb-4">WanderWorld Cinematic Diary 2026</h3>
+          <p class="text-muted mb-4">Witness full-length cinematic documentaries of tropical destinations, high-altitude alpine treks, and remote cultural rituals filmed in 4K resolution by our guide teams and content creator travelers.</p>
+          <div class="d-flex align-items-center gap-3 mb-3 text-secondary card-hover p-2 rounded-3">
+            <i class="bi bi-camera-video-fill fs-4 text-primary icon-float"></i>
+            <div>
+              <h6 class="fw-bold mb-0">100+ Destination Videos</h6>
+              <span class="small text-muted">Complete guide walkthroughs and cultural highlights.</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-3 text-secondary card-hover p-2 rounded-3">
+            <i class="bi bi-chat-heart-fill fs-4 text-primary icon-bounce"></i>
+            <div>
+              <h6 class="fw-bold mb-0">Traveler Vlogs</h6>
+              <span class="small text-muted">Real stories shared directly by our touring families.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Virtual Reality & Drone Tours Section -->
+  <section class="py-5 bg-dark text-white position-relative overflow-hidden wave-divider">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-25"></div>
+    <div class="container position-relative z-1">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-info fw-bold text-uppercase tracking-wider">Immersive Travel</span>
+        <h2 class="display-5 fw-bold mt-2 text-shimmer">360° VR & Aerial Drone Tours</h2>
+        <p class="text-white-50 col-md-6 mx-auto">Fly high above the world's most breathtaking sites or explore them on foot using our state-of-the-art interactive virtual tours.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Tour 1 -->
+        <div class="col-md-4 fade-in-up delay-1">
+          <div class="card bg-secondary-subtle border-0 shadow rounded-4 overflow-hidden card-hover text-white h-100">
+             <div class="position-relative" style="height: 220px;">
+              <video src="./images/vid2.mp4" autoplay muted controls class="w-100 h-100 object-fit-cover" alt="Tokyo Drone View"> </video> 
+            </div>
+            <div class="card-body p-4 bg-dark">
+              <h4 class="fw-bold text-white  mb-2">Bali Tropical Flight</h4>
+              <p class="small text-white-50 mb-0">Fly over lush green rice terraces, sacred volcanic lakes, and beautiful white sandy coastlines in stunning 4K drone cinematography.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Tour 2 -->
+        <div class="col-md-4 fade-in-up delay-2">
+          <div class="card bg-secondary-subtle border-0 shadow rounded-4 overflow-hidden card-hover text-white h-100">
+             <div class="position-relative" style="height: 220px;">
+              <video src="./images/vid3.mp4" autoplay muted controls class="w-100 h-100 object-fit-cover" alt="Tokyo Drone View"> </video>              
+            </div>
+            <div class="card-body p-4 bg-dark">
+              <h4 class="fw-bold text-white  mb-2">Swiss Alps Glacier Expedition</h4>
+              <p class="small text-white-50 mb-0">Navigate towering snow peaks, frozen crevasses, and rustic alpine cabins. An immersive 360-degree paragliding experience.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Tour 3 -->
+        <div class="col-md-4 fade-in-up delay-3">
+          <div class="card bg-secondary-subtle border-0 shadow rounded-4 overflow-hidden card-hover text-white h-100">
+            <div class="position-relative" style="height: 220px;">
+              <video src="./images/vid4.mp4" autoplay muted controls class="w-100 h-100 object-fit-cover" alt="Tokyo Drone View"> </video>            
+            </div>
+            <div class="card-body p-4 bg-dark">
+              <h4 class="fw-bold text-white mb-2">Tokyo Neon Skyline at Night</h4>
+              <p class="small text-white-50 mb-0">Fly over Shibuya Crossing, Tokyo Tower, and neon-drenched futuristic streets. Experience Japan's nightlife from above.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Traveler Moments Collage -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Social Feed</span>
+        <h2 class="display-5 fw-bold mt-2">Traveler Moments Collage</h2>
+        <p class="text-muted col-md-6 mx-auto">See real, un-edited snapshots posted on social media by families traveling with WanderWorld. Tag #WanderWorld to get featured!</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6 fade-in-scale delay-1">
+          <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow-sm w-100 card-hover" alt="Moment 1">
+        </div>
+        <div class="col-md-4 col-sm-6 fade-in-scale delay-2">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow-sm w-100 card-hover" alt="Moment 2">
+        </div>
+        <div class="col-md-4 col-sm-12 fade-in-scale delay-3">
+          <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow-sm w-100 card-hover" alt="Moment 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567</p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> contact@wanderworld.com</p>
+          
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

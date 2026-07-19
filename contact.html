@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander World</title>
+    <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-xl sticky-top navbar-light py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+        <span>WanderWorld</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="hotels.html">Hotels</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Travel Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="./login.html">
+            <button class="btn btn-outline-primary px-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-circle me-1"></i> Login
+          </button>
+        </a>
+          
+        <a href="./booknow.html">
+          <button class="btn btn-gradient px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#bookNowModal">
+            Book Now <i class="bi bi-arrow-right-short ms-1"></i>
+          </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Mini Hero Banner -->
+  <div class="mini-hero" style="background-image: url(./images/banner.jpg);">
+    <div class="container mini-hero-content text-white">
+      <h1 class="display-4 fw-bold text-white mb-2">Contact WanderWorld Travels</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Contact Us</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Contact Form & Info Columns -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+            <h2 class="fw-bold mb-3">Send Us a Message</h2>
+            <p class="text-muted mb-4">Have questions about specific packages, dates, or payment details? Drop us a note below and our local agent will reach out in 24 hours.</p>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contactName" class="form-label fw-semibold text-secondary">Full Name</label>
+                  <input type="text" class="form-control bg-light border-0 py-2.5" id="contactName" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactEmail" class="form-label fw-semibold text-secondary">Email Address</label>
+                  <input type="email" class="form-control bg-light border-0 py-2.5" id="contactEmail" placeholder="Your Email" required>
+                </div>
+                <div class="col-12">
+                  <label for="contactSubject" class="form-label fw-semibold text-secondary">Subject</label>
+                  <input type="text" class="form-control bg-light border-0 py-2.5" id="contactSubject" placeholder="Regarding..." required>
+                </div>
+                <div class="col-12">
+                  <label for="contactMessage" class="form-label fw-semibold text-secondary">Message</label>
+                  <textarea class="form-control bg-light border-0" id="contactMessage" rows="5" placeholder="Write your message details..." required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-gradient px-4 py-3 rounded-pill mt-4">Send Message <i class="bi bi-send-fill ms-2"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Information Sidebar -->
+        <div class="col-lg-5">
+          <div class="row g-4">
+            <!-- Details Card -->
+            <div class="col-12">
+              <div class="bg-white p-4 rounded-4 shadow-sm border-start border-primary border-4">
+                <h3 class="fw-bold h4 mb-3">Contact Details</h3>
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Our Headquarters</h6>
+                    <span class="text-muted small">101 Broadway Ave, New York, NY 10001</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <i class="bi bi-telephone-fill text-primary fs-4"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Phone Number</h6>
+                    <span class="text-muted small">+1 (800) 123-4567 (Toll-Free)</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Email Address</h6>
+                    <span class="text-muted small">contact@wanderworld.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Support Hours -->
+            <div class="col-12">
+              <div class="bg-white p-4 rounded-4 shadow-sm border-start border-info border-4">
+                <h3 class="fw-bold h4 mb-3">Business Hours</h3>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0 text-muted small">
+                  <div class="d-flex justify-content-between">
+                    <span>Monday - Friday</span>
+                    <span class="fw-semibold text-dark">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Saturday</span>
+                    <span class="fw-semibold text-dark">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Sunday</span>
+                    <span class="fw-semibold text-danger">Closed (Offline)</span>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Emergency Hotline -->
+            <div class="col-12">
+              <div class="bg-white p-4 rounded-4 shadow-sm border-start border-warning border-4">
+                <h3 class="fw-bold h4 mb-2">24/7 Client Emergency</h3>
+                <p class="text-muted small mb-3">Currently traveling with a WanderWorld package and have an immediate emergency? Contact our hotlines at any hour.</p>
+                <div class="d-flex align-items-center gap-2 text-danger fw-bold fs-5">
+                  <i class="bi bi-exclamation-octagon-fill"></i>
+                  <span>+1 (800) 999-HELP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Locations Grid -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-primary fw-bold text-uppercase tracking-wider">Our Branches</span>
+        <h2 class="display-5 fw-bold mt-2">Visit Our Offices</h2>
+      </div>
+      <div class="row g-4 text-center">
+        <!-- Office 1 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="fs-1 text-primary mb-3"><i class="bi bi-building"></i></div>
+            <h4 class="fw-bold mb-2">Boston Branch</h4>
+            <p class="text-muted small mb-0">50 State Street, Suite 10, Boston, MA 02109</p>
+          </div>
+        </div>
+        <!-- Office 2 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="fs-1 text-primary mb-3"><i class="bi bi-building-fill-check"></i></div>
+            <h4 class="fw-bold mb-2">Rome Office</h4>
+            <p class="text-muted small mb-0">Via del Corso 200, 00186 Roma, Italy</p>
+          </div>
+        </div>
+        <!-- Office 3 -->
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 card-hover">
+            <div class="fs-1 text-primary mb-3"><i class="bi bi-building-fill-add"></i></div>
+            <h4 class="fw-bold mb-2">Tokyo Office</h4>
+            <p class="text-muted small mb-0">Shibuya 2-Chome, Tokyo 150-0002, Japan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Placeholder -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="fw-bold text-center mb-4">Location Map</h3>
+      <div class="rounded-4 overflow-hidden shadow-sm" style="height: 400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617539075791!2d-73.9868512!3d40.7484405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" class="w-100 h-100 border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact FAQ Accordion -->
+  <section class="py-5 bg-light">
+    <div class="container col-lg-8 mx-auto">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold">Contact Support FAQ</h2>
+      </div>
+      <div class="accordion shadow-sm rounded-4 overflow-hidden" id="contactFaqAccordion">
+        <!-- Q1 -->
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="cHeadingOne">
+            <button class="accordion-button fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#cCollapseOne" aria-expanded="true" aria-controls="cCollapseOne">
+              Q1. Can I visit your offices in person for holiday booking planning?
+            </button>
+          </h2>
+          <div id="cCollapseOne" class="accordion-collapse collapse show" aria-labelledby="cHeadingOne" data-bs-parent="#contactFaqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              Absolutely! We welcome in-person visits to any of our physical office branches in Boston, Rome, and Tokyo. We recommend setting up an appointment schedule via email to ensure our local destination manager is ready to assist you.
+            </div>
+          </div>
+        </div>
+        <!-- Q2 -->
+        <div class="accordion-item border-0 border-top">
+          <h2 class="accordion-header" id="cHeadingTwo">
+            <button class="accordion-button collapsed fw-bold text-dark bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#cCollapseTwo" aria-expanded="false" aria-controls="cCollapseTwo">
+              Q2. Do you charge consulting fees for designing custom package routes?
+            </button>
+          </h2>
+          <div id="cCollapseTwo" class="accordion-collapse collapse" aria-labelledby="cHeadingTwo" data-bs-parent="#contactFaqAccordion">
+            <div class="accordion-body bg-white text-muted">
+              No, our custom destination consultation, guide preparation, and price breakdowns are completely free of charge. You only pay for travel assets (hotels, flights, entrance ticket reservations) when you formally choose to confirm your booking.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand Info -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center text-white mb-3" href="index.html">
+            <i class="bi bi-globe-americas text-primary me-2 fs-3"></i>
+            <span class="fw-bold">WanderWorld</span>
+          </a>
+          <p class="text-white-50 small mb-4">WanderWorld Travels is a premium travel bookings platform, offering flight, hotel, and fully curated tours package reservations across 120 countries globally.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-white-50 hover-zoom fs-5"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-white-50 text-decoration-none hover-link">Home</a></li>
+            <li><a href="destinations.html" class="text-white-50 text-decoration-none hover-link">Destinations</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotels</a></li>
+            <li><a href="gallery.html" class="text-white-50 text-decoration-none hover-link">Gallery</a></li>
+            <li><a href="blog.html" class="text-white-50 text-decoration-none hover-link">Travel Blog</a></li>
+            <li><a href="about.html" class="text-white-50 text-decoration-none hover-link">About Us</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none hover-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Col 3: Services -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Our Services</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Flight Booking</a></li>
+            <li><a href="hotels.html" class="text-white-50 text-decoration-none hover-link">Hotel Booking</a></li>
+            <li><a href="packages.html" class="text-white-50 text-decoration-none hover-link">Tour Packages</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Travel Insurance</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none hover-link">Visa Assistance</a></li>
+          </ul>
+        </div>
+        <!-- Col 4: Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold text-white mb-3">Contact Details</h5>
+          <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> 101 Broadway Ave, New York, NY 10001</p>
+          <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> +1 (800) 123-4567</p>
+          <p class="text-white-50 small mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i> contact@wanderworld.com</p>
+          
+          <h6 class="fw-bold text-white small mb-2">Subscribe to newsletter</h6>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-sm bg-secondary border-0 text-white placeholder-white-50" placeholder="Your Email" required>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 text-white-50 opacity-25">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0 text-white-50 small">&copy; 2026 WanderWorld Travels. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end small">
+          <a href="#" class="text-white-50 text-decoration-none hover-link me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
